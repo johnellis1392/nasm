@@ -12,4 +12,5 @@ _compile() {
 _compile
 while inotifywait --event modify ${infile}; do
   _compile
+  clear
 done
