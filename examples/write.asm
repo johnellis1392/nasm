@@ -2,9 +2,11 @@ bits    32
 extern  _printf, _scanf
 global  _main
 
+
 section .data
     message     dw  "Hello!"
     lenmessage  equ $ - message
+
 
 section .text
 _main:
