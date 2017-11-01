@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        INFILE: main.asm
+        OUTFILE: main
+
+    command:
+      - ./watch-and-build.sh
+
+    volumes:
+      - .:/usr/src/app
